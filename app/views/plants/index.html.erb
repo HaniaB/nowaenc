@@ -1,0 +1,26 @@
+
+<div class="center jumbotron">
+<% if @plants.size == 0 %>
+    <h2> Brak wpisów! </h2>
+    <% end %>
+<%= link_to 'Dodaj nową roślinę', new_plant_path %>
+<table>
+  <tr>
+    <th>Nazwa</th>
+    <th colspan="2"></th>
+  </tr>
+   <% @plants.each do |plant| %>
+    <tr>
+      <td><%= plant.name %></td>
+      <td><%= link_to 'Pokaż', plant_path(plant) %></td>
+      <td><%= link_to 'Edytuj', edit_plant_path(plant) %></td>
+      <td><%= link_to 'Usuń', plant_path(plant),
+              method: :delete,
+              data: { confirm: 'Czy napewno usunąć?' } %></td>
+  
+    </tr>
+    
+  <% end %>
+   
+</table>
+</div>

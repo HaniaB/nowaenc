@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  latin: MyString
+  family: MyString
+  category: MyString
+  category_id: 1
+  description: MyText
+  foto: MyString
+
+two:
+  name: MyString
+  latin: MyString
+  family: MyString
+  category: MyString
+  category_id: 1
+  description: MyText
+  foto: MyString

@@ -1,0 +1,45 @@
+<header class="navbar navbar-default navbar-static-top">   
+      <nav>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+           
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Home",   root_path %></li>
+            <li><a href="#">Informacje</a></li>
+            <li><a href="#">Galeria</a></li>
+         
+         
+        <li><%= link_to "Rośliny",   plants_path %></li>
+        <li><%= link_to "Kategorie",  " #" %></li>
+        <li><%= link_to "Help",   '#' %></li>
+        <li><%= link_to "Log in", '#' %></li>
+        <li>
+        </ul>
+            
+          <ul class="nav navbar-nav navbar-right">  
+          <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+           
+            <%= form_tag(plants_path, :method => "get", class: "navbar-form", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Szukaj" %>
+        </div>
+        <button type="submit" class="btn btn-default">Szukaj</button>
+      </form>
+      <% end %>
+        </li>
+      </ul>
+    </nav>
+<%= link_to image_tag("meczennica_f3.jpg", id: "banner"), '#' %>
+  <div class="container">
+    
+    <%= link_to "Encyklopedia Roślin", '#', id: "logo" %>
+  </div>
+</header>

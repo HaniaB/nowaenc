@@ -1,0 +1,21 @@
+<div class="center jumbotron">
+<h1><%= @plant.name %></h1>
+<h3><%= @plant.latin %></h3>
+  
+ <p>
+  <strong>Rodzina:</strong>
+  <%= @plant.family %>
+</p>
+
+<p>
+    <%= image_tag @plant.foto, class: "zdjecie" %>
+</p>
+
+<p>
+  <strong>Uprawa:</strong>
+  <%= @plant.condition %>
+</p>
+
+
+<%= link_to 'Powrót', plants_path %>
+</div>
