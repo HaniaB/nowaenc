@@ -27,7 +27,8 @@ class PlantsController < ApplicationController
         @plant = Plant.new(plant_params)
         if @plant.save
         redirect_to @plant
-        end
+    end
+
     end
    
     def update

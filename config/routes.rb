@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  resources :categories
   resources :plants
+  resources :galery
+  resources :info
 root 'welcome#index'
 
 

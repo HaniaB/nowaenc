@@ -1,7 +1,8 @@
 
-<div class="center jumbotron">
+<div class="jumbotron">
+  <h1>Rośliny</h1>
 <% if @plants.size == 0 %>
-    <h2> Brak wpisów! </h2>
+    <h3> Brak wpisów! </h3>
     <% end %>
 <%= link_to 'Dodaj nową roślinę', new_plant_path %>
 <table>

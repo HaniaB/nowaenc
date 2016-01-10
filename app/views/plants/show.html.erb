@@ -1,21 +1,23 @@
-<div class="center jumbotron">
-<h1><%= @plant.name %></h1>
-<h3><%= @plant.latin %></h3>
+<div class="jumbotron">
+    <p>
+            <%= image_tag @plant.foto, class: "zdjecie" %>
+    </p>
+    <h1><%= @plant.name %></h1>
+
+    <h3><em><%= @plant.latin %></em></h3>
+
   
- <p>
-  <strong>Rodzina:</strong>
-  <%= @plant.family %>
-</p>
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Rodzina: <%= @plant.family %></h4>
+  
+        <p></p>
+        <p>
+          <h4>Uprawa:</h4>
+          <%= @plant.condition %>
+        </p>
+        </div>
+      </div>
 
-<p>
-    <%= image_tag @plant.foto, class: "zdjecie" %>
-</p>
-
-<p>
-  <strong>Uprawa:</strong>
-  <%= @plant.condition %>
-</p>
-
-
-<%= link_to 'Powrót', plants_path %>
+    <%= link_to 'Powrót', plants_path %>
 </div>

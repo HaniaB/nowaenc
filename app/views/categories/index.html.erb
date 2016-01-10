@@ -1,0 +1,22 @@
+<div class="jumbotron">
+<h1>Kategorie</h1>
+<% if @categories.size == 0 %>
+    <h3> Brak wpisów! </h3>
+    <% end %>
+ <%= link_to 'Nowa kategoria', new_category_path %>
+<table>
+  <tr>
+    <th>Kategoria</th>
+    <th colspan="2"></th>
+  </tr>
+   <% @categories.each do |category| %>
+    <tr>
+      <td><%= category.cat %></td>
+      <td><%= link_to 'Pokaż', category_path(category) %></td>
+      <td colspan="2"></td><td><%= link_to 'Edytuj', edit_category_path(category) %></td>
+      <td colspan="2"></td> <td><%= link_to 'Usuń', category_path(category)%></td>
+    </tr>
+  <% end %>
+  
+</table>
+</div>
