@@ -1,4 +1,5 @@
 class PlantsController < ApplicationController
+    http_basic_authenticate_with name: "hania", password: "1234", except: [:index, :show]
     def index
     @plants = Plant.all
         
@@ -10,6 +11,7 @@ class PlantsController < ApplicationController
 
   def show
     @plant = Plant.find(params[:id])
+   
     
   end
     

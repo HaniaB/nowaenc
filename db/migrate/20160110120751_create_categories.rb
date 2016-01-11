@@ -6,9 +6,6 @@ class CreateCategories < ActiveRecord::Migration
 
       t.timestamps null: false
       
-      add_column :plants, :category_id, :integer
-      add_column :plants, :cat_name, :string
-      add_index :plants, :category_id
     end
   end
 end

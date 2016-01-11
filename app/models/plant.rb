@@ -1,5 +1,6 @@
 class Plant < ActiveRecord::Base
-    belongs_to :cathegory, dependent: :destroy
+    has_many :categorizations
+    has_many :categories, through: :categorizations
     mount_uploader :foto, FotoUploader
     validates :name, presence: true
     
